@@ -1,6 +1,6 @@
 resource "google_cloudbuild_trigger" "example2" {
   project = "alert-flames-286515"
-  name    = "cloud-run-golang-trigger"
+  name    = "cloud-run-golang-docker-trigger"
   disabled = false
   service_account = "projects/alert-flames-286515/serviceAccounts/cloudbuildaccount@alert-flames-286515.iam.gserviceaccount.com"
 
