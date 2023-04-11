@@ -1,3 +1,4 @@
+
 resource "google_cloud_run_service" "example" {
   name     = "golang-service"
   location = "us-central1"
@@ -5,7 +6,7 @@ resource "google_cloud_run_service" "example" {
   template {
     spec {
       containers {
-        image = "gcr.io/alert-flames-286515/simple-go-app:latest"
+        image = "gcr.io/alert-flames-286515/nodeapp:v2.0"
       }
     }
   }

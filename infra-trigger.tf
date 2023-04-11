@@ -8,5 +8,5 @@ resource "google_cloudbuild_trigger" "example" {
     repo_name   = "github_rjones18_gcp-cloud-run-golang-app"
     branch_name = "main"
   }
-  filename = "cloudbuild.yaml"
+  filename = "cloudbuld_files/cloudbuild.yaml"
 }
