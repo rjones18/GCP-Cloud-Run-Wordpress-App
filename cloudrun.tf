@@ -1,4 +1,3 @@
-
 resource "google_cloud_run_service" "example" {
   name     = "golang-service"
   location = "us-central1"
@@ -40,22 +39,3 @@ data "google_iam_policy" "public_binding" {
 output "service_url" {
   value = google_cloud_run_service.example.status[0].url
 }
-
-
-# resource "google_cloud_run_service" "default" {
-#   name     = "cloudrun-golang-app"
-#   location = "us-central1"
-  
-#   template {
-#     spec {
-#       containers {
-#         image = "gcr.io/alert-flames-286515/simple-go-app:latest"
-#       }
-#     }
-#   }
-
-#   traffic {
-#     percent         = 100
-#     latest_revision = true
-#   }
-# }
