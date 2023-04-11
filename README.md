@@ -1,6 +1,6 @@
 # GCP-Cloud-Run-Golang-App
 
-In this project, I have proficiently executed the deployment of a containerized Golang application on the Google Cloud Run platform, utilizing Terraform for infrastructure as code (IaC) management. To streamline the deployment process, I implemented a Continuous Deployment (CD) strategy by seamlessly integrating the GitHub repository with Google Cloud Source Repositories.
+In this project, I have proficiently executed the deployment of a containerized Golang application on the Google Cloud Run service, utilizing Terraform for infrastructure as code (IaC) management. To streamline the deployment process, I implemented a Continuous Deployment (CD) strategy by seamlessly integrating the GitHub repository with Google Cloud Source Repositories.
 
 The deployment workflow is powered by two distinct Cloud Build pipelines. The first pipeline automates the deployment of Terraform infrastructure code to set up the Cloud Run environment, while the second pipeline efficiently generates and deploys updated Docker images to Cloud Run. This dual-pipeline approach ensures rapid and consistent deployment of changes to the application.
 
