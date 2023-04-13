@@ -8,6 +8,8 @@ To enhance the application's security, I integrated Snyk into the CI/CD pipeline
 
 To bolster the application's accessibility and user experience, I employed Google Domains to provision and assign a custom domain name, thereby enabling users to interact with the application through a user-friendly web address. This comprehensive implementation demonstrates a robust and scalable containerized application deployment strategy on the Cloud Run platform, with added security measures provided by Snyk.
 
+Link to Website: https://golang-app.reggietestgcpdomain.com 
+
 ## Architecture Breakdown
 
 The application is broken down into the architecture below:
