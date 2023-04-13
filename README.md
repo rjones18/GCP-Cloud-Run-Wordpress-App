@@ -10,4 +10,4 @@ To bolster the application's accessibility and user experience, I employed Googl
 
 The application is broken down into the architecture below:
 
-![applications](https://github.com/rjones18/Images/blob/main/GCP%20NodeJs2.png)
+![applications](https://github.com/rjones18/Images/blob/main/Screen%20Shot%202023-04-12%20at%207.48.39%20PM.png)
