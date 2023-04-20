@@ -25,10 +25,12 @@ WORKDIR /root/
 # Copy the binary from the builder stage
 COPY --from=builder /app/main .
 
+# Set the PORT environment variable
+ENV PORT 8080
+
 # Expose the application port
 EXPOSE 8080
 
 # Run the application
 CMD ["./main"]
-
 

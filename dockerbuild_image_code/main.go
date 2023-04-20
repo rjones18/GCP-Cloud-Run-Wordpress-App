@@ -9,6 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"context"
 	"log"
+	"os"
     secretmanager "cloud.google.com/go/secretmanager/apiv1"
     secretmanagerpb "cloud.google.com/go/secretmanager/apiv1/secretmanagerpb"
 )
@@ -118,6 +119,10 @@ func main() {
 		c.HTML(http.StatusOK, "index.html", gin.H{"weather_info": weatherInfo})
 	})
 
-	r.Run(":8080")
+    port := os.Getenv("PORT")
+    if port == "" {
+        port = "8080"
+    }
+    r.Run(":" + port)
 }
 
