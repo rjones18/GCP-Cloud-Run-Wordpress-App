@@ -8,6 +8,7 @@ resource "google_cloud_run_service" "example" {
       containers {
         image = "gcr.io/alert-flames-286515/nodeapp:v2.0"
       }
+      service_account_name = "test-83@alert-flames-286515.iam.gserviceaccount.com"      
     }
   }
 
