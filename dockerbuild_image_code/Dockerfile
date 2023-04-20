@@ -1,27 +1,34 @@
-# Use the official Debian image as the base image
-FROM debian:bullseye-slim
+# Use the official Golang image as the base image
+FROM golang:1.17-alpine as builder
 
-# Install necessary packages for building the Go application
-RUN apt-get update && apt-get install -y golang git
-
-# Set up environment variables for the Go application
-ENV GOPATH /go
-ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
-ENV GO111MODULE=off
-
-# Create and set the working directory within the container
-RUN mkdir /app
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the Go application source code into the container
-COPY . .
+# Copy the Go module files
+COPY go.mod go.sum ./
+
+# Download the dependencies
+RUN go mod download
+
+# Copy the source code
 COPY . .
 
-# Build the Go application
-RUN go build -o main .
+# Build the Go app
+RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 
-# Expose the application's port
+# Use a lightweight Alpine image for the final stage
+FROM alpine:latest
+
+# Set the working directory
+WORKDIR /root/
+
+# Copy the binary from the builder stage
+COPY --from=builder /app/main .
+
+# Expose the application port
 EXPOSE 8080
 
-# Start the Go application
-CMD ["/app/main"]
+# Run the application
+CMD ["./main"]
+
+

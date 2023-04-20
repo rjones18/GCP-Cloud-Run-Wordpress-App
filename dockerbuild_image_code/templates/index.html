@@ -2,12 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
-    <title>Go Web App</title>
+    <title>ClimateCanvas</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
+
 <body>
-    <h1>Hello, this is a simple Go web application with HTML and CSS!</h1>
+    <div class="container">
+        <h1>ClimateCanvas</h1>
+        
+        <form action="/" method="POST">
+            <label for="location">Enter your location:</label>
+            <input type="text" id="location" name="location" required>
+            <button type="submit">Get Weather</button>
+        
+    </form>
+    {{ if .weather_info }}
+        <h2>Weather Information</h2>
+        <p>Address: {{ .weather_info.address }}</p>
+        <p>Coordinates: {{ .weather_info.coordinates }}</p>
+        <p>Description: {{ .weather_info.description }}</p>
+        <p>Temperature: {{ .weather_info.temperature }}</p>
+    {{ end }}
+    {{ if .error }}
+        <p>{{ .error }}</p>
+    {{ end }}
+    </div>
+    <script src="/static/js/scripts.js"></script>
 </body>
-<img class="profile" src="static/goffer.png" alt="Go Picture"  width="900" height="900">
 </html>
+
