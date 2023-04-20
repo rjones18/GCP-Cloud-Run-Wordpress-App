@@ -25,6 +25,12 @@ WORKDIR /root/
 # Copy the binary from the builder stage
 COPY --from=builder /app/main .
 
+# Copy the templates directory
+COPY templates templates
+
+# Copy the templates directory
+COPY static static
+
 # Set the PORT environment variable
 ENV PORT 8080
 
@@ -32,5 +38,5 @@ ENV PORT 8080
 EXPOSE 8080
 
 # Run the application
-CMD ["/app/main"]
+CMD ["./main"]
 
