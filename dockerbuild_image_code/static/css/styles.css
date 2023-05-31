@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 2;
     background-color: #f0f0f0;
   }
   
@@ -9,20 +9,16 @@ body {
     max-width: 960px;
     margin: 0 auto;
     padding: 2rem;
-    text-align: center;
-  }
-
-  code {
-    text-align: center;
   }
   
   h1 {
-    text-align: center;
+    text-align: end;
     margin-bottom: 2rem;
   }
 
-  code {
+  h1 {
     text-align: center;
+    margin-bottom: 2rem;
   }
   
   table {
