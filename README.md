@@ -10,4 +10,4 @@ Link to Website: https://weather-app.reggietestgcpdomain.com/
 
 The application is broken down into the architecture below:
 
-![applications](https://github.com/rjones18/Images/blob/main/Cloud%20Run%20.png)
+![applications](https://github.com/rjones18/Images/blob/main/Cloud%20Run%20Application.png)
