@@ -1,5 +1,5 @@
 # Use the official Golang image as the base image
-FROM golang:1.17-alpine as builder
+FROM cgr.dev/chainguard/go as builder
 
 # Set the working directory inside the container
 WORKDIR /app
