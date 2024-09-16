@@ -17,7 +17,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 
 # Use a lightweight Alpine image for the final stage
-FROM alpine:latest
+FROM alpine:3.18.3
 
 # Set the working directory
 WORKDIR /root/
